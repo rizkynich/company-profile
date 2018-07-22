@@ -25,7 +25,7 @@ const items = [
   }
 ];
 
-class Carousel extends Component {
+class CarouselCP extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
@@ -93,4 +93,4 @@ class Carousel extends Component {
 }
 
 
-export default Carousel;
+export default CarouselCP;
