@@ -2,13 +2,15 @@ import React from "react";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import { Jumbotron, Button } from "reactstrap";
+import Carousel from "./components/Carousel";
 
 class App extends React.Component {
   render() {
     return (
       <div>
         <Header />
-        <Jumbotron>
+        <Carousel />
+                <Jumbotron>
           <h1 className="display-3">Hello, world!</h1>
           <p className="lead">
             This is a simple hero unit, a simple Jumbotron-style component for
