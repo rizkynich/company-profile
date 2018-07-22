@@ -2,14 +2,14 @@ import React from "react";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import { Jumbotron, Button } from "reactstrap";
-import Carousel from "./components/Carousel";
+import CarouselCP from "./components/CarouselCP";
 
 class App extends React.Component {
   render() {
     return (
       <div>
         <Header />
-        <Carousel />
+        <CarouselCP />
                 <Jumbotron>
           <h1 className="display-3">Hello, world!</h1>
           <p className="lead">
