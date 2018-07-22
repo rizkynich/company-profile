@@ -6,11 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from "reactstrap";
 
 export default class Header extends React.Component {
@@ -31,29 +27,50 @@ export default class Header extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">Santren Coding</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  GitHub
+                <NavLink
+                  href="#"
+                  onClick={() => {
+                    this.props.pindahHalaman("home");
+                  }}
+                >
+                  Beranda
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink
+                  href="#"
+                  onClick={() => {
+                    this.props.pindahHalaman("about");
+                  }}
+                >
+                  Tentag Kami
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="#"
+                  onClick={() => {
+                    this.props.pindahHalaman("kajian");
+                  }}
+                >
+                  Kajian
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="#"
+                  onClick={() => {
+                    this.props.pindahHalaman("mondok");
+                  }}
+                >
+                  Mondok
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
